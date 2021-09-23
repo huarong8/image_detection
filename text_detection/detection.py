@@ -1,8 +1,9 @@
 import cv2
+import sys
 # Load an image
 # you can find some images for testing in "Images for Testing"
 #frame = cv2.imread("a.jpg")
-frame = cv2.imread("b.jpg")
+frame = cv2.imread(sys.argv[1])
 
 # Load model weights
 model = cv2.dnn_TextDetectionModel_DB("./DB_TD500_resnet50.onnx")
